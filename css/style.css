@@ -1,0 +1,588 @@
+/*
+ Template Name: FoodEpik (v2.0)
+ File Name: style.css
+ Author Name: ThemeVault
+ Author URI: https://www.themevault.net/
+ License URI: https://www.themevault.net/license/
+*/
+
+/* ============================================================
+   1. Design tokens
+   ============================================================ */
+
+:root {
+    --fe-primary: #a31621;          /* tamarillo (default theme) */
+    --fe-primary-dark: color-mix(in srgb, var(--fe-primary) 82%, #000);
+    --fe-dark: #2d3e50;
+    --fe-heading: #000000;
+    --fe-body: #707070;
+    --fe-line: #e1e1e1;
+    --fe-light: #f7f7f7;
+    --fe-white: #ffffff;
+    --fe-font: "Montserrat", "Segoe UI", Arial, sans-serif;
+    --fe-radius: 0;                  /* FoodEpik is square-cornered */
+    --fe-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    --fe-section-pad: 70px;
+}
+
+/* 6 switchable color themes — one variable each */
+[data-theme="pomegranate"]  { --fe-primary: #eb4511; }
+[data-theme="hot-cinnamon"] { --fe-primary: #cd671d; }
+[data-theme="egg-blue"]     { --fe-primary: #08bbb7; }
+[data-theme="west-side"]    { --fe-primary: #ffa111; }
+[data-theme="dark-green"]   { --fe-primary: #49a239; }
+
+/* ============================================================
+   2. Fonts (local, self-contained)
+   ============================================================ */
+
+@font-face { font-family: "Montserrat"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/montserrat-400.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fonts/montserrat-500.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/montserrat-600.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/montserrat-700.woff2") format("woff2"); }
+
+/* ============================================================
+   3. Base
+   ============================================================ */
+
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+
+body {
+    font-family: var(--fe-font);
+    color: var(--fe-body);
+    font-size: 15px;
+    line-height: 1.7;
+    background: var(--fe-white);
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--fe-heading); font-weight: 700; }
+
+a { color: var(--fe-primary); text-decoration: none; }
+a:hover { color: var(--fe-primary-dark); }
+
+.fe-section { padding: var(--fe-section-pad) 0; }
+@media (max-width: 767.98px) { :root { --fe-section-pad: 48px; } }
+
+/* Section titles: gray kicker + double-underlined h2 */
+.fe-section-title { margin-bottom: 40px; }
+.fe-section-title .fe-kicker {
+    color: var(--fe-body);
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.fe-section-title h1,
+.fe-section-title h2 {
+    border-bottom: 3px solid var(--fe-primary);
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px 0;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.fe-section-title h1::before,
+.fe-section-title h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 1px;
+    background: var(--fe-primary);
+}
+.fe-section-title.fe-on-dark h1,
+.fe-section-title.fe-on-dark h2,
+.fe-section-title.fe-on-dark .fe-kicker { color: var(--fe-white); }
+
+/* ============================================================
+   4. Buttons — square, uppercase, letterspaced
+   ============================================================ */
+
+.btn-fe,
+.btn-fe-outline,
+.btn-fe-light {
+    border-radius: var(--fe-radius);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    text-transform: uppercase;
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+.btn-fe { background: var(--fe-primary); border: 1px solid var(--fe-primary); color: var(--fe-white); }
+.btn-fe:hover, .btn-fe:focus { background: var(--fe-primary-dark); border-color: var(--fe-primary-dark); color: var(--fe-white); }
+.btn-fe-outline { background: transparent; border: 1px solid var(--fe-heading); color: var(--fe-heading); }
+.btn-fe-outline:hover, .btn-fe-outline:focus { background: var(--fe-primary); border-color: var(--fe-primary); color: var(--fe-white); }
+.btn-fe-light { background: transparent; border: 1px solid var(--fe-white); color: var(--fe-white); }
+.btn-fe-light:hover, .btn-fe-light:focus { background: var(--fe-primary); border-color: var(--fe-primary); color: var(--fe-white); }
+
+.form-check-input:checked { background-color: var(--fe-primary); border-color: var(--fe-primary); }
+.form-control:focus, .form-select:focus {
+    border-color: var(--fe-primary);
+    box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--fe-primary) 20%, transparent);
+}
+
+/* ============================================================
+   5. Header / navbar
+   ============================================================ */
+
+.fe-navbar {
+    background: var(--fe-white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+.fe-navbar .navbar-brand {
+    color: var(--fe-primary);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.fe-navbar .nav-link {
+    color: var(--fe-heading);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-left: .9rem;
+    padding-right: .9rem;
+}
+.fe-navbar .nav-link:hover,
+.fe-navbar .nav-link:focus,
+.fe-navbar .nav-link.active { color: var(--fe-primary); }
+.fe-navbar .dropdown-menu {
+    border: 1px solid var(--fe-primary);
+    border-radius: var(--fe-radius);
+    margin-top: 0;
+}
+.fe-navbar .dropdown-item {
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.fe-navbar .dropdown-item i { color: var(--fe-primary); width: 1.4em; margin-right: .35rem; }
+.fe-navbar .dropdown-item:hover, .fe-navbar .dropdown-item:focus { background: var(--fe-primary); color: var(--fe-white); }
+.fe-navbar .dropdown-item:hover i, .fe-navbar .dropdown-item:focus i { color: var(--fe-white); }
+
+/* ============================================================
+   6. Hero
+   ============================================================ */
+
+.fe-hero {
+    background: url("../images/bgbanner.png") no-repeat center top / cover;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.fe-hero::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .25); }
+.fe-hero > .container { position: relative; }
+.fe-hero h1 {
+    color: var(--fe-white);
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.fe-hero h1 .fe-hero-accent { color: var(--fe-primary); }
+.fe-hero p {
+    color: var(--fe-white);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 16px;
+    text-transform: capitalize;
+}
+@media (max-width: 575.98px) { .fe-hero { min-height: 440px; } }
+
+/* ============================================================
+   7. Feature strip (Fresh Food / Chef's Specials / Good Wines)
+   ============================================================ */
+
+.fe-strip { background: var(--fe-primary); color: var(--fe-white); padding: 28px 0; }
+.fe-strip-item { display: flex; gap: 16px; align-items: flex-start; padding: 10px 0; }
+.fe-strip-item img { width: 48px; height: 48px; object-fit: contain; filter: brightness(0) invert(1); flex-shrink: 0; }
+.fe-strip-item h3 { color: var(--fe-white); font-size: 17px; text-transform: capitalize; margin-bottom: 6px; }
+.fe-strip-item p { color: rgba(255, 255, 255, .85); font-size: 13px; margin-bottom: 0; }
+
+/* ============================================================
+   8. About / Services
+   ============================================================ */
+
+.fe-framed-img { border: 1px solid var(--fe-line); padding: 12px; background: var(--fe-white); box-shadow: var(--fe-shadow); }
+
+.fe-service { display: flex; gap: 18px; margin-bottom: 30px; }
+.fe-service-icon {
+    border: 1px solid var(--fe-line);
+    color: var(--fe-primary);
+    flex-shrink: 0;
+    font-size: 22px;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fe-service h3 { font-size: 18px; margin-bottom: 8px; }
+.fe-service p { margin-bottom: 0; }
+
+/* ============================================================
+   9. Menu lists
+   ============================================================ */
+
+.fe-course-heading {
+    color: var(--fe-primary);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.fe-menu-item { display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px dashed var(--fe-line); }
+.fe-menu-item img { width: 64px; height: 64px; object-fit: cover; flex-shrink: 0; }
+.fe-menu-item-body { flex-grow: 1; min-width: 0; }
+.fe-menu-item h3, .fe-menu-item h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+.fe-menu-item .fe-price { color: var(--fe-primary); font-weight: 700; font-size: 15px; white-space: nowrap; }
+.fe-menu-item p { font-size: 13px; margin-bottom: 0; text-transform: capitalize; }
+
+/* ============================================================
+   10. Full-bleed bands (Open Hours / Discount / Dining / Deal / Clients)
+   ============================================================ */
+
+.fe-band { position: relative; background-position: center top; background-size: cover; background-repeat: no-repeat; color: var(--fe-white); }
+.fe-band::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .6); }
+.fe-band > .container { position: relative; }
+.fe-band-pad { padding-top: 90px; padding-bottom: 90px; }
+.fe-band-lede { max-width: 560px; }
+.fe-band h2, .fe-band h3 { color: var(--fe-white); }
+.fe-band p { color: rgba(255, 255, 255, .9); }
+
+.fe-band-open    { background-image: url("../images/Image17.png"); }
+.fe-band-discount{ background-image: url("../images/Image26.png"); }
+.fe-band-dining  { background-image: url("../images/Image36.png"); }
+.fe-band-deal    { background-image: url("../images/Image41.png"); }
+.fe-band-clients { background-image: url("../images/Image42.png"); }
+.fe-band-newsletter { background-image: url("../images/Image46.png"); }
+
+.fe-discount-line { font-size: clamp(22px, 4vw, 34px); font-weight: 700; text-transform: capitalize; margin: 0; }
+.fe-discount-line .fe-xl { color: var(--fe-primary); font-size: 1.6em; font-weight: 700; }
+
+/* ============================================================
+   11. Dishes cards (content-length-proof)
+   ============================================================ */
+
+.fe-card { background: var(--fe-white); border: 1px solid var(--fe-line); height: 100%; display: flex; flex-direction: column; transition: box-shadow .3s ease, transform .3s ease; }
+.fe-card:hover { box-shadow: var(--fe-shadow); transform: translateY(-4px); }
+.fe-card-media { aspect-ratio: 4 / 3; overflow: hidden; }
+.fe-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.fe-card:hover .fe-card-media img { transform: scale(1.05); }
+.fe-card-body { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; text-align: center; }
+.fe-card-body h3 { font-size: 16px; text-transform: capitalize; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.fe-card-body .fe-price { color: var(--fe-primary); font-weight: 700; }
+.fe-card-body p { font-size: 13px; margin-top: 6px; margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ============================================================
+   12. Reservation form
+   ============================================================ */
+
+.fe-input-icon { position: relative; }
+.fe-input-icon > i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--fe-primary); pointer-events: none; }
+.fe-input-icon .form-control { padding-left: 42px; border-radius: var(--fe-radius); }
+
+/* ============================================================
+   13. Gallery + lightbox
+   ============================================================ */
+
+.fe-gallery a { display: block; position: relative; overflow: hidden; }
+.fe-gallery figure { margin: 0; }
+.fe-gallery img { transition: transform .4s ease; }
+.fe-gallery a::after {
+    content: "\2b";  /* plus sign */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--fe-white);
+    background: color-mix(in srgb, var(--fe-primary) 65%, transparent);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.fe-gallery a:hover::after, .fe-gallery a:focus::after { opacity: 1; }
+.fe-gallery a:hover img { transform: scale(1.06); }
+
+.fe-lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 1000px); }
+.fe-lightbox::backdrop { background: rgba(0, 0, 0, .85); }
+.fe-lightbox img { max-width: 100%; max-height: 82vh; display: block; margin: 0 auto; }
+.fe-lightbox .fe-lightbox-bar { display: flex; justify-content: center; gap: 12px; padding: 12px 0; }
+.fe-lightbox button {
+    background: var(--fe-primary);
+    border: 0;
+    color: var(--fe-white);
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+}
+.fe-lightbox button:hover { background: var(--fe-primary-dark); }
+
+/* ============================================================
+   14. Staff
+   ============================================================ */
+
+.fe-staff { text-align: center; height: 100%; }
+.fe-staff img { border: 1px solid var(--fe-line); }
+.fe-staff h3 { font-size: 17px; margin: 16px 0 2px; text-transform: capitalize; }
+.fe-staff .fe-role { color: var(--fe-primary); font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px; }
+.fe-staff p { font-size: 13px; }
+
+.fe-social { display: flex; gap: 8px; justify-content: center; }
+.fe-social a {
+    border: 1px solid var(--fe-line);
+    color: var(--fe-body);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+.fe-social a:hover, .fe-social a:focus { background: var(--fe-primary); border-color: var(--fe-primary); color: var(--fe-white); }
+.fe-band .fe-social a { border-color: rgba(255, 255, 255, .4); color: var(--fe-white); }
+
+/* ============================================================
+   15. Deal countdown + counters
+   ============================================================ */
+
+.fe-countdown { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 30px 0; }
+.fe-countdown > div { background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .35); min-width: 84px; padding: 14px 10px; text-align: center; }
+.fe-countdown .fe-count-num { color: var(--fe-white); display: block; font-size: 30px; font-weight: 700; }
+.fe-countdown .fe-count-label { color: color-mix(in srgb, var(--fe-primary) 55%, #fff); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+.fe-freebie { text-align: center; }
+.fe-freebie .fe-free { color: var(--fe-primary); font-size: 26px; font-weight: 700; text-transform: uppercase; margin-bottom: 0; }
+.fe-freebie .fe-free-what { color: var(--fe-white); font-size: 20px; font-weight: 700; text-transform: uppercase; display: block; line-height: 1.3; }
+.fe-freebie h4 { color: rgba(255, 255, 255, .85); font-size: 14px; font-weight: 500; margin-top: 8px; text-transform: capitalize; }
+
+.fe-counter-block { text-align: center; padding: 16px 0; }
+.fe-counter-block .fe-counter { color: var(--fe-white); font-size: 38px; font-weight: 700; margin-bottom: 0; }
+.fe-counter-block h3 { color: color-mix(in srgb, var(--fe-primary) 55%, #fff); font-size: 15px; font-weight: 600; text-transform: uppercase; }
+
+.fe-clients-lead { max-width: 760px; margin: 0 auto 10px; text-align: center; font-size: 18px; text-transform: capitalize; }
+.fe-clients-rule { width: 80px; height: 3px; background: var(--fe-primary); margin: 0 auto 40px; }
+
+.fe-numbered { padding: 10px 0; }
+.fe-numbered .fe-num { color: var(--fe-primary); font-size: 24px; font-weight: 700; display: block; }
+.fe-numbered h3 { color: var(--fe-white); font-size: 17px; margin: 6px 0 10px; text-transform: capitalize; }
+.fe-numbered p { font-size: 13px; margin-bottom: 0; }
+
+/* ============================================================
+   16. Testimonials carousel
+   ============================================================ */
+
+.fe-testimonial { max-width: 760px; margin: 0 auto; text-align: center; padding: 0 48px 40px; }
+.fe-testimonial .fe-quote { color: var(--fe-primary); font-size: 26px; margin: 18px 0 10px; }
+.fe-testimonial .fe-who { font-size: 17px; text-transform: capitalize; }
+.fe-carousel .carousel-indicators { position: static; margin-top: 8px; }
+.fe-carousel .carousel-indicators [data-bs-target] { background-color: var(--fe-primary); background-clip: content-box; box-sizing: border-box; width: 40px; height: 40px; padding: 15px; margin: 0; border-radius: 50%; border: 0; }
+
+/* ============================================================
+   17. Blog cards
+   ============================================================ */
+
+.fe-blog-card { position: relative; overflow: hidden; height: 100%; }
+.fe-blog-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.fe-blog-card .fe-blog-overlay {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--fe-primary) 78%, #000 8%);
+    color: var(--fe-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.fe-blog-card:hover .fe-blog-overlay, .fe-blog-card:focus-within .fe-blog-overlay { opacity: 1; }
+.fe-blog-overlay .fe-date { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+.fe-blog-overlay h3 { color: var(--fe-white); font-size: 18px; margin: 8px 0; text-transform: capitalize; }
+.fe-blog-overlay p { font-size: 13px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.fe-blog-overlay .btn-fe-light { align-self: center; }
+@media (hover: none) {
+    /* touch devices: overlay always readable */
+    .fe-blog-card .fe-blog-overlay { position: static; opacity: 1; background: var(--fe-dark); }
+    .fe-blog-card img { aspect-ratio: 16 / 9; }
+}
+
+/* ============================================================
+   18. Newsletter + footer
+   ============================================================ */
+
+.fe-newsletter { padding-top: 44px; padding-bottom: 44px; }
+.fe-newsletter h2 { color: var(--fe-white); font-size: 24px; text-transform: capitalize; margin-bottom: 0; }
+.fe-newsletter .input-group .form-control { border-radius: var(--fe-radius); }
+.fe-newsletter .btn-fe { white-space: nowrap; }
+
+.fe-footer { background: var(--fe-dark); color: rgba(255, 255, 255, .75); padding: var(--fe-section-pad) 0 40px; }
+.fe-footer h2 {
+    border-bottom: 2px solid var(--fe-primary);
+    color: var(--fe-white);
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 8px;
+    text-transform: capitalize;
+}
+.fe-footer p, .fe-footer li { font-size: 13px; }
+.fe-footer ul { list-style: none; padding: 0; margin: 0; }
+.fe-footer li { padding: 4px 0; text-transform: capitalize; }
+.fe-footer a { color: rgba(255, 255, 255, .75); }
+.fe-footer a:hover { color: var(--fe-primary); }
+.fe-hours { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed rgba(255, 255, 255, .15); padding: 5px 0; font-size: 13px; }
+
+.fe-backlink { background: color-mix(in srgb, var(--fe-dark) 85%, #000); color: rgba(255, 255, 255, .7); padding: 18px 0; text-align: center; font-size: 13px; }
+.fe-backlink a { color: var(--fe-primary); }
+
+/* ============================================================
+   19. Back to top / style switcher
+   ============================================================ */
+
+#fe-back-to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1040;
+    background: var(--fe-primary);
+    color: var(--fe-white);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+#fe-back-to-top.is-visible { opacity: 1; pointer-events: auto; }
+#fe-back-to-top:hover { background: var(--fe-primary-dark); }
+
+/* The demo colour picker is hidden. To show it again, delete the next line; to pick the site colour, put data-theme="egg-blue" (or pomegranate, hot-cinnamon, west-side, dark-green) on the <html> tag. */
+.fe-switcher { display: none !important; }
+.fe-switcher { position: fixed; top: 40%; right: 0; z-index: 1050; display: flex; align-items: flex-start; }
+.fe-switcher-toggle {
+    background: var(--fe-dark);
+    border: 0;
+    color: var(--fe-white);
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+}
+.fe-switcher-panel {
+    background: var(--fe-white);
+    box-shadow: var(--fe-shadow);
+    display: none;
+    padding: 10px;
+    gap: 8px;
+    grid-template-columns: repeat(2, 26px);
+}
+.fe-switcher.is-open .fe-switcher-panel { display: grid; }
+.fe-switcher-panel button { border: 2px solid transparent; width: 26px; height: 26px; border-radius: 50%; padding: 0; }
+.fe-switcher-panel button[aria-pressed="true"] { border-color: var(--fe-heading); }
+.fe-swatch-tamarillo    { background: #a31621; }
+.fe-swatch-pomegranate  { background: #eb4511; }
+.fe-swatch-hot-cinnamon { background: #cd671d; }
+.fe-swatch-egg-blue     { background: #08bbb7; }
+.fe-swatch-west-side    { background: #ffa111; }
+.fe-swatch-dark-green   { background: #49a239; }
+
+/* ============================================================
+   20. Reveal animations (wow.js replacement)
+   ============================================================ */
+
+.fe-reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.fe-reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fe-reveal { opacity: 1; transform: none; transition: none; }
+    .fe-card, .fe-card img, .fe-gallery img { transition: none; }
+}
+
+/* ============================================================
+   21. UI-kit ("Our Elements") shared bits
+   ============================================================ */
+
+.fe-page-head { background: var(--fe-dark); padding: 90px 0 40px; text-align: center; }
+.fe-page-head h1 { color: var(--fe-white); font-size: 28px; text-transform: capitalize; margin-bottom: 0; }
+.fe-page-head .fe-kicker { color: color-mix(in srgb, var(--fe-primary) 55%, #fff); display: block; font-size: 13px; font-weight: 600; letter-spacing: 1px; margin-bottom: 6px; text-transform: uppercase; }
+
+.fe-kit-block { border: 1px solid var(--fe-line); margin-bottom: 30px; }
+.fe-kit-block-head { background: var(--fe-light); border-bottom: 1px solid var(--fe-line); padding: 12px 18px; }
+.fe-kit-block-head h2 { font-size: 16px; margin: 0; text-transform: capitalize; }
+.fe-kit-block-body { padding: 18px; }
+
+/* FoodEpik is square-cornered — Bootstrap components follow the radius token
+   (utilities like .rounded-pill still win where a demo asks for them) */
+.btn,
+.alert,
+.form-control,
+.form-select,
+.card,
+.list-group,
+.list-group-item,
+.nav-tabs .nav-link,
+.nav-pills .nav-link,
+.badge,
+.modal-content,
+.toast { border-radius: var(--fe-radius); }
+.accordion {
+    --bs-accordion-border-radius: var(--fe-radius);
+    --bs-accordion-inner-border-radius: var(--fe-radius);
+}
+
+.alert { letter-spacing: 1px; }
+
+/* Message boxes — FoodEpik's own outline style (v1 "Message Print"):
+   transparent background, colored border + text. Use with .alert base. */
+.fe-message { background: transparent; border: 1px solid; }
+.fe-message-info    { border-color: #9ecdfc; color: #297ad3; }
+.fe-message-success { border-color: #a9e2c2; color: #36a367; }
+.fe-message-notice  { border-color: #f9ce75; color: #e9a00a; }
+.fe-message-error   { border-color: #ffbbbb; color: #e33131; }
+
+.accordion-button:not(.collapsed) { background: var(--fe-primary); color: var(--fe-white); }
+.accordion-button:focus { box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--fe-primary) 25%, transparent); }
+.nav-tabs .nav-link { color: var(--fe-heading); }
+.nav-tabs .nav-link.active { color: var(--fe-primary); font-weight: 600; }
+.nav-pills .nav-link { color: var(--fe-heading); border-radius: var(--fe-radius); }
+.nav-pills .nav-link.active { background-color: var(--fe-primary); color: var(--fe-white); }
+
+/* Article (blog single) */
+.fe-article > img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; margin-bottom: 20px; }
+.fe-article h1 { font-size: 28px; text-transform: capitalize; }
+.fe-article .fe-meta { color: var(--fe-body); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
+.fe-article .fe-meta i { color: var(--fe-primary); margin-right: 6px; }
+.fe-article h2 { font-size: 22px; margin-top: 28px; }
+.fe-article blockquote { border-left: 3px solid var(--fe-primary); color: var(--fe-heading); font-size: 17px; font-style: italic; margin: 24px 0; padding: 10px 20px; }
+
+/* Form confirmation note (tv-form-note) */
+.tv-form-note { margin: 14px 0 0; font-size: 15px; font-weight: 600; color: var(--fe-primary); text-align: center; outline: 0; }
+.fe-band-newsletter .tv-form-note { color: var(--fe-white); text-align: left; }
