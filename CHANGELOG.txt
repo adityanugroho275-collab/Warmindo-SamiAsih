@@ -1,0 +1,145 @@
+FoodEpik — Restaurant & Online Food Ordering HTML Template
+CHANGELOG
+============================================================
+
+Version 2.2 — November 2026
+------------------------------------------------------------
+
+- Real copy replaces the placeholder Latin text on the home page and the
+  element pages (grid, tabs, typography, message boxes) and the blog article;
+  the dish names and ingredients match their photos.
+- The demo colour picker is hidden. To bring it back, delete one line in
+  css/style.css; to set the site colour, add data-theme="egg-blue" (or
+  pomegranate, hot-cinnamon, west-side, dark-green) to the <html> tag.
+- The testimonial carousel dots are 40 pixels to tap, with the same look.
+- Fixed "Black Been" to "Black Bean" and the "Dina" welcome text to FoodEpik.
+
+
+Version 2.1 — November 2026
+------------------------------------------------------------
+
+A form and page-structure pass on version 2.0. The design is unchanged.
+
+- The reservation form and the newsletter sign-up now check their
+  fields and answer with a confirmation message, instead of reloading
+  the page. (They are demo forms: connect them to your own mail or
+  booking service.)
+- Every page now keeps its page title and content together inside one
+  main element, with data-section hooks on the header, footer and each
+  band, so the template is easier to split into components or a CMS.
+- grid.html uses the same page-title block as the other inner pages.
+
+Version 2.0 — August 2026
+------------------------------------------------------------
+
+This is a complete rebuild of FoodEpik on today's web standards.
+Every page was re-created from scratch while keeping the design,
+content and features you know from version 1.
+
+
+NEW IN THIS VERSION
+------------------------------------------------------------
+- menu.html — a full restaurant menu page (all courses with
+  prices). The "View Menu" and "See All Items" buttons now lead
+  here instead of nowhere.
+- blog-single.html — a complete blog article page with a
+  recent-posts and categories sidebar. The blog "Read More"
+  buttons now open it.
+- Every dead link in version 1 has a real destination now:
+  "Book Now" jumps to the reservation form, demo buttons are
+  real buttons, and social icons are labelled placeholders
+  ready for your profile URLs.
+
+FRAMEWORK & LIBRARIES
+------------------------------------------------------------
+- Bootstrap upgraded 3.3.6 -> 5.3 (the current major version;
+  Bootstrap 3 reached end of life in 2019).
+- jQuery REMOVED entirely, along with five jQuery plugins
+  (wow.js, waypoints, counterup, magnific-popup, the old style
+  switcher). Everything now runs on a single small vanilla
+  JavaScript file (js/main.js): scroll animations, stat
+  counters, the deal countdown, a built-in gallery lightbox,
+  back-to-top, and the color switcher.
+- Font Awesome upgraded 4.7 -> 6 (modern woff2 fonts only).
+- The Montserrat font is now bundled locally — no Google Fonts
+  CDN call, the template is fully self-contained and works
+  offline. (Version 1 also referenced two Open Sans font
+  families that were never shipped — that 9-year-old bug is
+  gone.)
+
+DESIGN
+------------------------------------------------------------
+- The 6 switchable color themes are still here (Tamarillo,
+  Pomegranate, Hot Cinnamon, Egg Blue, West Side, Dark Green)
+  with a tidier floating palette button; your visitors' choice
+  is remembered between visits. Each theme is now a single CSS
+  variable — creating your own theme takes one line.
+- The full design system is built on CSS custom properties
+  (design tokens) at the top of css/style.css: change a color,
+  font or radius once and it applies everywhere.
+- All Bootstrap components (buttons, alerts, forms, accordions,
+  tabs) automatically inherit FoodEpik's square-cornered look.
+- The "Message Print" outline boxes keep their original
+  FoodEpik style (colored border + text on white).
+- Improved contrast for small labels on dark sections.
+- Cards and menu rows are content-proof: longer dish names or
+  descriptions clamp gracefully instead of breaking the layout.
+
+STRUCTURE & STANDARDS
+------------------------------------------------------------
+- Semantic HTML5 landmarks (header/nav/main/aside/footer) on
+  every page; exactly one h1 per page with a logical heading
+  order — good for SEO.
+- Unique title and meta description on every page.
+- Accessibility pass: alt text on all images, labels on all
+  form fields, aria attributes on all interactive components,
+  keyboard-friendly lightbox and menus, reduced-motion support.
+- The reservation form uses native date, time and number
+  inputs — no datepicker plugin, perfect on phones.
+- Fully responsive and mobile-first: tested at desktop, tablet
+  and phone widths with zero horizontal overflow; the mobile
+  navigation closes itself after you pick a section and
+  supports the "Our Elements" submenu properly.
+- The entry page is now index.html (home.html redirects to it).
+
+PERFORMANCE
+------------------------------------------------------------
+- Package size cut from 4.5 MB to about 3.4 MB.
+- The icons reference page alone went from 300 KB of legacy
+  markup to a lean, curated Font Awesome 6 page.
+- Scripts load deferred at the end of the page; images
+  lazy-load; fonts are woff2 with font-display swap.
+
+FILES
+------------------------------------------------------------
+index.html            One-page restaurant site (entry page)
+menu.html             NEW — full restaurant menu
+blog-single.html      NEW — blog article page
+accordions.html       UI element reference
+alerts.html           UI element reference
+buttons.html          UI element reference
+form-fields.html      UI element reference
+grid.html             UI element reference
+icons.html            UI element reference (Font Awesome 6)
+message.html          UI element reference
+tab.html              UI element reference
+typography.html       UI element reference
+home.html             Redirect to index.html (kept for old links)
+css/                  bootstrap.min.css, fontawesome.min.css, style.css
+js/                   bootstrap.bundle.min.js, main.js
+fonts/                Montserrat woff2 (local)
+webfonts/             Font Awesome 6 woff2
+images/               All template images
+
+VERSION HISTORY
+------------------------------------------------------------
+2.0  (Aug 2026)  Complete rebuild: Bootstrap 5.3, no jQuery,
+                 FA6, two new pages, accessibility & SEO pass.
+1.0  (Apr 2018)  Original release (Bootstrap 3.3.6).
+
+LICENSE & CREDIT
+------------------------------------------------------------
+See License.txt. Please keep the ThemeVault credit link in the
+footer, or purchase the backlink removal on themevault.net.
+
+https://www.themevault.net/

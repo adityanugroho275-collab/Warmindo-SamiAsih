@@ -1,0 +1,364 @@
+<!--
+Template Name: FoodEpik (v2.0)
+File Name: typography.html
+Author Name: ThemeVault
+Author URI: https://www.themevault.net/
+License URI: https://www.themevault.net/license/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodEpik — Typography UI Element</title>
+    <meta name="description" content="FoodEpik UI kit — typography reference with headings, paragraphs, lead and drop-cap text, blockquotes, inline text formatting, lists and the Bootstrap 5 color palette.">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Color theme switcher -->
+<div class="fe-switcher" id="fe-switcher">
+    <button type="button" class="fe-switcher-toggle" aria-expanded="false" aria-controls="fe-switcher-panel" aria-label="Choose color theme">
+        <i class="fa-solid fa-palette" aria-hidden="true"></i>
+    </button>
+    <div class="fe-switcher-panel" id="fe-switcher-panel">
+        <button type="button" class="fe-swatch-tamarillo" data-fe-theme="tamarillo" aria-label="Tamarillo red theme"></button>
+        <button type="button" class="fe-swatch-pomegranate" data-fe-theme="pomegranate" aria-label="Pomegranate orange-red theme"></button>
+        <button type="button" class="fe-swatch-hot-cinnamon" data-fe-theme="hot-cinnamon" aria-label="Hot cinnamon orange theme"></button>
+        <button type="button" class="fe-swatch-egg-blue" data-fe-theme="egg-blue" aria-label="Egg blue teal theme"></button>
+        <button type="button" class="fe-swatch-west-side" data-fe-theme="west-side" aria-label="West side amber theme"></button>
+        <button type="button" class="fe-swatch-dark-green" data-fe-theme="dark-green" aria-label="Dark green theme"></button>
+    </div>
+</div>
+
+<!-- Header -->
+<header data-section="header">
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top fe-navbar" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">FOOdEPIK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#feNavbar" aria-controls="feNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="feNavbar">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Elements</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="accordions.html"><i class="fa-solid fa-circle-plus" aria-hidden="true"></i>Accordions</a></li>
+                            <li><a class="dropdown-item" href="alerts.html"><i class="fa-solid fa-bell" aria-hidden="true"></i>Alert</a></li>
+                            <li><a class="dropdown-item" href="buttons.html"><i class="fa-solid fa-link" aria-hidden="true"></i>Button</a></li>
+                            <li><a class="dropdown-item" href="form-fields.html"><i class="fa-solid fa-align-justify" aria-hidden="true"></i>Form Field</a></li>
+                            <li><a class="dropdown-item" href="grid.html"><i class="fa-solid fa-table-cells" aria-hidden="true"></i>Grid</a></li>
+                            <li><a class="dropdown-item" href="icons.html"><i class="fa-solid fa-heart" aria-hidden="true"></i>Icons</a></li>
+                            <li><a class="dropdown-item" href="message.html"><i class="fa-solid fa-comment" aria-hidden="true"></i>Message</a></li>
+                            <li><a class="dropdown-item" href="tab.html"><i class="fa-solid fa-table-columns" aria-hidden="true"></i>Tab</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="typography.html"><i class="fa-solid fa-font" aria-hidden="true"></i>Typography</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+<!-- Page head -->
+<div data-section="page-head" class="fe-page-head">
+    <div class="container">
+        <span class="fe-kicker">Our Elements</span>
+        <h1>Typography</h1>
+    </div>
+</div>
+<div data-section="content" class="fe-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Heading examples</h2></div>
+                    <div class="fe-kit-block-body">
+                        <p class="h1">Heading 1</p>
+                        <p class="h2">Heading 2</p>
+                        <p class="h3">Heading 3</p>
+                        <p class="h4">Heading 4</p>
+                        <p class="h5">Heading 5</p>
+                        <p class="h6 mb-4">Heading 6</p>
+                        <pre class="bg-light border p-3 mb-0"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Paragraph examples</h2></div>
+                    <div class="fe-kit-block-body">
+                        <h3 class="h5">Simple paragraph</h3>
+                        <p>We cook from scratch every day. The soup simmers while the bread bakes, the vegetables come from the morning market and nothing leaves the kitchen that we would not eat ourselves. Come hungry, stay as long as you like and tell us what you think on your way out.</p>
+                        <pre class="bg-light border p-3"><code>&lt;p&gt;
+    Your paragraph text goes here.
+&lt;/p&gt;</code></pre>
+
+                        <h3 class="h5 mt-4">Lead paragraph</h3>
+                        <p class="lead">Fresh food, cooked slowly and served warm.</p>
+                        <pre class="bg-light border p-3"><code>&lt;p class="lead"&gt;
+    Your paragraph text goes here.
+&lt;/p&gt;</code></pre>
+
+                        <h3 class="h5 mt-4">First letter highlighted paragraph</h3>
+                        <p class="clearfix"><span class="float-start fs-1 fw-bold lh-1 me-2">M</span>any of our regulars have been coming since we opened, and some of them now bring their children, who in turn bring theirs.</p>
+                        <pre class="bg-light border p-3 mb-0"><code>&lt;p&gt;
+    &lt;span class="float-start fs-1 fw-bold lh-1 me-2"&gt;Y&lt;/span&gt;our paragraph goes here.
+&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Block quote</h2></div>
+                    <div class="fe-kit-block-body">
+                        <blockquote class="blockquote">
+                            <p>A good meal is the simplest way to say thank you, and the easiest way to start a conversation.</p>
+                        </blockquote>
+                        <pre class="bg-light border p-3"><code>&lt;blockquote class="blockquote"&gt;
+    &lt;p&gt;Your text goes here.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+
+                        <h3 class="h5 mt-4">Block quote with source</h3>
+                        <figure class="mb-4">
+                            <blockquote class="blockquote">
+                                <p>A good meal is the simplest way to say thank you.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></figcaption>
+                        </figure>
+                        <pre class="bg-light border p-3 mb-0"><code>&lt;figure&gt;
+    &lt;blockquote class="blockquote"&gt;
+        &lt;p&gt;Your text goes here.&lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption class="blockquote-footer"&gt;
+        Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Text formatting</h2></div>
+                    <div class="fe-kit-block-body">
+                        <p>
+                            <mark>highlighted text</mark>
+                            <s>strikethrough text</s>
+                            <u>underlined text</u>
+                            <strong>bold text</strong>
+                            <em>italicized text</em>
+                            <small>small text</small>
+                        </p>
+                        <p class="text-uppercase mb-1">uppercased text</p>
+                        <p class="text-capitalize mb-4">capitalized text</p>
+                        <pre class="bg-light border p-3 mb-0"><code>&lt;mark&gt;highlighted text&lt;/mark&gt;
+&lt;s&gt;strikethrough text&lt;/s&gt;
+&lt;u&gt;underlined text&lt;/u&gt;
+&lt;strong&gt;bold text&lt;/strong&gt;
+&lt;em&gt;italicized text&lt;/em&gt;
+&lt;small&gt;small text&lt;/small&gt;
+&lt;p class="text-uppercase"&gt;uppercased text&lt;/p&gt;
+&lt;p class="text-capitalize"&gt;capitalized text&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Lists formatting</h2></div>
+                    <div class="fe-kit-block-body">
+                        <div class="row gy-4">
+                            <div class="col-sm-6">
+                                <h3 class="h5">Unordered</h3>
+                                <ul class="mb-0">
+                                    <li>Fresh bread and olive oil</li>
+                                    <li>Soup of the day</li>
+                                    <li>Main courses
+                                        <ul>
+                                            <li>Seasonal vegetables</li>
+                                            <li>Grilled meats</li>
+                                        </ul>
+                                    </li>
+                                    <li>Wine and cocktails</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="h5">Ordered</h3>
+                                <ol class="mb-0">
+                                    <li>Fresh bread and olive oil</li>
+                                    <li>Soup of the day</li>
+                                    <li>Main courses
+                                        <ul>
+                                            <li>Seasonal vegetables</li>
+                                            <li>Fish of the day</li>
+                                        </ul>
+                                    </li>
+                                    <li>Desserts and coffee</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block mb-0">
+                    <div class="fe-kit-block-head"><h2>Colors formatting</h2></div>
+                    <div class="fe-kit-block-body">
+                        <div class="row gy-3">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-primary text-white text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#0d6efd</p>
+                                    <p class="mb-0"><code>.text-primary</code><br><code>.bg-primary</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-info text-dark text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#0dcaf0</p>
+                                    <p class="mb-0"><code>.text-info</code><br><code>.bg-info</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-success text-white text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#198754</p>
+                                    <p class="mb-0"><code>.text-success</code><br><code>.bg-success</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-warning text-dark text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#ffc107</p>
+                                    <p class="mb-0"><code>.text-warning</code><br><code>.bg-warning</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-danger text-white text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#dc3545</p>
+                                    <p class="mb-0"><code>.text-danger</code><br><code>.bg-danger</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-secondary text-white text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#6c757d</p>
+                                    <p class="mb-0"><code>.text-secondary</code><br><code>.bg-secondary</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-dark text-white text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#212529</p>
+                                    <p class="mb-0"><code>.text-dark</code><br><code>.bg-dark</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-black text-white text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#000000</p>
+                                    <p class="mb-0"><code>.text-black</code><br><code>.bg-black</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-body-secondary text-dark text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#e9ecef</p>
+                                    <p class="mb-0"><code>.text-body-secondary</code><br><code>.bg-body-secondary</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-body-tertiary border text-dark text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#f8f9fa</p>
+                                    <p class="mb-0"><code>.text-body-tertiary</code><br><code>.bg-body-tertiary</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-light border text-dark text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#f8f9fa</p>
+                                    <p class="mb-0"><code>.text-light</code><br><code>.bg-light</code></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <p class="bg-white border text-dark text-uppercase small py-4 px-3 mb-0 flex-shrink-0">#ffffff</p>
+                                    <p class="mb-0"><code>.text-white</code><br><code>.bg-white</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer data-section="footer" id="foodfooter" class="fe-footer">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <h2>About Us</h2>
+                <p>A neighbourhood restaurant with fresh seasonal food, a short wine list and a quiet table whenever you need one.</p>
+                <div class="fe-social justify-content-start">
+                    <a href="#" aria-label="FoodEpik on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on Google"><i class="fa-brands fa-google-plus-g" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on Pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Working Time</h2>
+                <div class="fe-hours"><span>Mon-Tue</span><span>09.00-22.00</span></div>
+                <div class="fe-hours"><span>Wed</span><span>08.30-20.30</span></div>
+                <div class="fe-hours"><span>Thu-Fri</span><span>9.45-19.55</span></div>
+                <div class="fe-hours"><span>Sat</span><span>10.00-20.45</span></div>
+                <div class="fe-hours"><span>Sun</span><span>08.00-19.10</span></div>
+                <div class="fe-hours"><span>Holidays</span><span>Holidays</span></div>
+            </div>
+            <div class="col-md-4">
+                <h2>Menu Categories</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="menu.html">Appetizers</a></li>
+                            <li><a href="menu.html">Breakfast</a></li>
+                            <li><a href="menu.html">Lunch</a></li>
+                            <li><a href="menu.html">Dinner</a></li>
+                            <li><a href="menu.html">Soups</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="menu.html">Appetizers</a></li>
+                            <li><a href="menu.html">Breakfast</a></li>
+                            <li><a href="menu.html">Lunch</a></li>
+                            <li><a href="menu.html">Dinner</a></li>
+                            <li><a href="menu.html">Soups</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="fe-backlink">
+    <div class="container">
+        <!--Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink !-->
+        <p class="mb-0">&copy; All right reserved.  <a href="https://www.themevault.net/foodepik-online-food-ordering-template-free" target="_blank" rel="noopener">FoodEpik template</a> by ThemeVault</p>
+    </div>
+</div>
+
+<button id="fe-back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-angles-up" aria-hidden="true"></i></button>
+
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

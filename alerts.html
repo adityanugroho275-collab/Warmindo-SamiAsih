@@ -1,0 +1,217 @@
+<!--
+Template Name: FoodEpik (v2.0)
+File Name: alerts.html
+Author Name: ThemeVault
+Author URI: https://www.themevault.net/
+License URI: https://www.themevault.net/license/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodEpik — Alerts UI Element</title>
+    <meta name="description" content="FoodEpik UI kit — Bootstrap 5 alert boxes in all contextual colors, alerts with icons and dismissible alerts, styled for the FoodEpik restaurant template.">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Color theme switcher -->
+<div class="fe-switcher" id="fe-switcher">
+    <button type="button" class="fe-switcher-toggle" aria-expanded="false" aria-controls="fe-switcher-panel" aria-label="Choose color theme">
+        <i class="fa-solid fa-palette" aria-hidden="true"></i>
+    </button>
+    <div class="fe-switcher-panel" id="fe-switcher-panel">
+        <button type="button" class="fe-swatch-tamarillo" data-fe-theme="tamarillo" aria-label="Tamarillo red theme"></button>
+        <button type="button" class="fe-swatch-pomegranate" data-fe-theme="pomegranate" aria-label="Pomegranate orange-red theme"></button>
+        <button type="button" class="fe-swatch-hot-cinnamon" data-fe-theme="hot-cinnamon" aria-label="Hot cinnamon orange theme"></button>
+        <button type="button" class="fe-swatch-egg-blue" data-fe-theme="egg-blue" aria-label="Egg blue teal theme"></button>
+        <button type="button" class="fe-swatch-west-side" data-fe-theme="west-side" aria-label="West side amber theme"></button>
+        <button type="button" class="fe-swatch-dark-green" data-fe-theme="dark-green" aria-label="Dark green theme"></button>
+    </div>
+</div>
+
+<!-- Header -->
+<header data-section="header">
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top fe-navbar" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">FOOdEPIK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#feNavbar" aria-controls="feNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="feNavbar">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Elements</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="accordions.html"><i class="fa-solid fa-circle-plus" aria-hidden="true"></i>Accordions</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="alerts.html"><i class="fa-solid fa-bell" aria-hidden="true"></i>Alert</a></li>
+                            <li><a class="dropdown-item" href="buttons.html"><i class="fa-solid fa-link" aria-hidden="true"></i>Button</a></li>
+                            <li><a class="dropdown-item" href="form-fields.html"><i class="fa-solid fa-align-justify" aria-hidden="true"></i>Form Field</a></li>
+                            <li><a class="dropdown-item" href="grid.html"><i class="fa-solid fa-table-cells" aria-hidden="true"></i>Grid</a></li>
+                            <li><a class="dropdown-item" href="icons.html"><i class="fa-solid fa-heart" aria-hidden="true"></i>Icons</a></li>
+                            <li><a class="dropdown-item" href="message.html"><i class="fa-solid fa-comment" aria-hidden="true"></i>Message</a></li>
+                            <li><a class="dropdown-item" href="tab.html"><i class="fa-solid fa-table-columns" aria-hidden="true"></i>Tab</a></li>
+                            <li><a class="dropdown-item" href="typography.html"><i class="fa-solid fa-font" aria-hidden="true"></i>Typography</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+<!-- Page head -->
+<div data-section="page-head" class="fe-page-head">
+    <div class="container">
+        <span class="fe-kicker">Our Elements</span>
+        <h1>Alerts</h1>
+    </div>
+</div>
+<div data-section="content" class="fe-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Alerts boxes</h2></div>
+                    <div class="fe-kit-block-body">
+                        <div class="alert alert-primary" role="alert">
+                            This is a primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            This is a secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            This is a success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            This is a danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            This is a warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            This is a info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            This is a light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark mb-0" role="alert">
+                            This is a dark alert—check it out!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block">
+                    <div class="fe-kit-block-head"><h2>Alerts with icons</h2></div>
+                    <div class="fe-kit-block-body">
+                        <div class="alert alert-success" role="alert">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i> This is a success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fa-solid fa-ban" aria-hidden="true"></i> This is a danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> This is a warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info mb-0" role="alert">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> This is a info alert—check it out!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fe-kit-block mb-0">
+                    <div class="fe-kit-block-head"><h2>Dismissible alerts</h2></div>
+                    <div class="fe-kit-block-body">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            This is a success alert—check it out!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                            This is a danger alert—check it out!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer data-section="footer" id="foodfooter" class="fe-footer">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <h2>About Us</h2>
+                <p>A neighbourhood restaurant with fresh seasonal food, a short wine list and a quiet table whenever you need one.</p>
+                <div class="fe-social justify-content-start">
+                    <a href="#" aria-label="FoodEpik on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on Google"><i class="fa-brands fa-google-plus-g" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="FoodEpik on Pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Working Time</h2>
+                <div class="fe-hours"><span>Mon-Tue</span><span>09.00-22.00</span></div>
+                <div class="fe-hours"><span>Wed</span><span>08.30-20.30</span></div>
+                <div class="fe-hours"><span>Thu-Fri</span><span>9.45-19.55</span></div>
+                <div class="fe-hours"><span>Sat</span><span>10.00-20.45</span></div>
+                <div class="fe-hours"><span>Sun</span><span>08.00-19.10</span></div>
+                <div class="fe-hours"><span>Holidays</span><span>Holidays</span></div>
+            </div>
+            <div class="col-md-4">
+                <h2>Menu Categories</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="menu.html">Appetizers</a></li>
+                            <li><a href="menu.html">Breakfast</a></li>
+                            <li><a href="menu.html">Lunch</a></li>
+                            <li><a href="menu.html">Dinner</a></li>
+                            <li><a href="menu.html">Soups</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="menu.html">Appetizers</a></li>
+                            <li><a href="menu.html">Breakfast</a></li>
+                            <li><a href="menu.html">Lunch</a></li>
+                            <li><a href="menu.html">Dinner</a></li>
+                            <li><a href="menu.html">Soups</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="fe-backlink">
+    <div class="container">
+        <!--Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink !-->
+        <p class="mb-0">&copy; All right reserved.  <a href="https://www.themevault.net/foodepik-online-food-ordering-template-free" target="_blank" rel="noopener">FoodEpik template</a> by ThemeVault</p>
+    </div>
+</div>
+
+<button id="fe-back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-angles-up" aria-hidden="true"></i></button>
+
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

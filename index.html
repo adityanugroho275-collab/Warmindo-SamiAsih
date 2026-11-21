@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warmindo Samiasih | Makan Enak, Harga Bersahabat</title>
+<meta name="description" content="Warmindo Samiasih menyediakan aneka makanan dan minuman dengan harga terjangkau. Buka 24 jam.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --brown: #512b1b;
+  --orange: #ad4f1b;
+  --cream: #fff8f1;
+  --soft: #f7eadc;
+  --muted: #8b7668;
+  --white: #fff;
+  --shadow: 0 14px 38px rgba(73,42,23,.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--brown);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 42px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #f3dfcc;
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .6px;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+  margin: 16px 0;
+  color: var(--brown);
+}
+
+.section-head p,
+.muted {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  border: 2px solid var(--orange);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brown);
+  border-color: var(--brown);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: #fff;
+  color: var(--orange);
+  border-color: #efd7c3;
+}
+
+.btn-outline:hover {
+  color: #fff;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 100px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 22px rgba(40,20,10,.07);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+}
+
+.brand-name {
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.8px;
+}
+
+.brand-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #9a8577;
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 2.1vw, 30px);
+  flex: 1;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+.nav-cta {
+  white-space: nowrap;
+  padding: 13px 23px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--soft);
+  color: var(--brown);
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 10px 13px;
+}
+
+/* HERO */
+
+.hero {
+  padding: 76px 0 82px;
+  background: linear-gradient(110deg, #fff7ee 0%, #f6e2cd 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin: 28px 0 22px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero-copy {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 610px;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  height: 430px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 14px 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  margin-top: -28px;
+  position: relative;
+  margin-left: 24px;
+}
+
+/* TENTANG KAMI */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin: 18px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.feature {
+  background: #fff;
+  padding: 17px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(73,42,23,.05);
+  font-weight: 700;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.feature i {
+  color: var(--orange);
+  font-size: 19px;
+}
+
+/* MENU */
+
+#menu {
+  background: #f8eee4;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: #ead9c8;
+}
+
+.menu-info {
+  padding: 19px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menu-code {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #a58b79;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.menu-info h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.menu-info p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 18px;
+  min-height: 42px;
+}
+
+.menu-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.add-btn {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: var(--brown);
+}
+
+/* PEMESANAN */
+
+#pemesanan {
+  background: #f7ede3;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.order-panel {
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.panel-title {
+  font-size: 23px;
+  font-weight: 800;
+  margin: 0 0 24px;
+}
+
+.panel-title i {
+  color: var(--orange);
+  margin-right: 8px;
+}
+
+.cart-list {
+  min-height: 220px;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #a58b79;
+  padding: 45px 10px;
+}
+
+.empty-cart i {
+  font-size: 42px;
+  display: block;
+  margin-bottom: 12px;
+  color: #d9b99e;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1e5da;
+}
+
+.cart-row small {
+  display: block;
+  color: var(--muted);
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-controls button {
+  border: 0;
+  background: var(--soft);
+  color: var(--brown);
+  border-radius: 7px;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 800;
+  border-top: 1px solid #eadbce;
+  padding-top: 20px;
+  margin-top: 18px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #ead8c8;
+  border-radius: 12px;
+  padding: 14px 15px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--brown);
+  background: #fff;
+}
+
+.form-group textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.send-btn {
+  width: 100%;
+  border: 0;
+  margin-top: 5px;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 14px 0 0;
+}
+
+/* GALERI */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* LOKASI */
+
+#lokasi {
+  background: #fff;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.map-frame {
+  width: 100%;
+  height: 390px;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.location-copy p {
+  color: var(--muted);
+}
+
+.contact-line {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin: 20px 0;
+  color: var(--muted);
+}
+
+.contact-line i {
+  color: var(--orange);
+  font-size: 20px;
+  margin-top: 4px;
+  width: 22px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #392419;
+  color: #fff;
+  padding: 55px 0 22px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 45px;
+}
+
+footer h3 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+footer p,
+footer a {
+  color: #e0cfc2;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.15);
+  margin-top: 35px;
+  padding-top: 18px;
+  color: #cdb9aa;
+  font-size: 12px;
+}
+
+.wa-float {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #16c66a;
+  color: #fff;
+  font-size: 31px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.2);
+  z-index: 999;
+}
+
+.wa-float:hover {
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px) {
+  .brand {
+    min-width: 220px;
+  }
+
+  .brand-name {
+    font-size: 25px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media(max-width:800px) {
+  .navbar {
+    height: 82px;
+  }
+
+  .nav-inner {
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-name {
+    font-size: 22px;
+  }
+
+  .brand-tag {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 18px 24px 24px;
+    box-shadow: 0 12px 20px rgba(0,0,0,.08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 11px 0;
+    border-bottom: 1px solid #f3e8de;
+    font-size: 15px;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .order-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-photo {
+    height: 340px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .about-photo {
+    height: 340px;
+  }
+
+  .section {
+    padding: 68px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:560px) {
+  .container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .menu-card img {
+    height: 135px;
+  }
+
+  .menu-info {
+    padding: 13px;
+  }
+
+  .menu-info h3 {
+    font-size: 15px;
+  }
+
+  .menu-info p {
+    font-size: 11px;
+    min-height: 54px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .add-btn {
+    width: 37px;
+    height: 37px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-grid img {
+    height: 240px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 41px;
+  }
+
+  .hero-copy {
+    font-size: 15px;
+  }
+
+  .order-panel {
+    padding: 21px;
+  }
+
+  .panel-title {
+    font-size: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .wa-float {
+    width: 56px;
+    height: 56px;
+    right: 17px;
+    bottom: 17px;
+    font-size: 27px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a class="brand" href="#beranda">
+      <span class="brand-name">Warmindo Samiasih</span>
+      <span class="brand-tag">HANGAT • LEZAT • TERJANGKAU</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#menu">Daftar Menu</a>
+      <a href="#pemesanan">Pemesanan</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#lokasi">Lokasi</a>
+    </nav>
+
+    <a class="btn nav-cta" href="#pemesanan">Pesan Sekarang</a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- BERANDA -->
+
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+
+    <div>
+      <span class="eyebrow">WARMINDO SAMIASIH • SEJAK 2018</span>
+
+      <h1>
+        Makan Enak,<br>
+        <span>Harga Bersahabat!</span>
+      </h1>
+
+      <p class="hero-copy">
+        Selamat datang di Warmindo Samiasih. Nikmati berbagai pilihan makanan dan minuman dengan harga terjangkau. Cocok untuk menemani aktivitasmu kapan saja.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#menu">
+          <i class="fa-solid fa-utensils"></i>
+          Lihat Menu
+        </a>
+
+        <a class="btn btn-outline" href="#tentang">
+          Tentang Kami
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <img
+        class="hero-photo"
+        src="images/warmindo-depan.jpg.jpeg"
+        alt="Suasana bagian depan Warmindo Samiasih"
+      >
+
+      <div class="hero-note">
+        <i class="fa-regular fa-clock" style="color:var(--orange)"></i>
+        Buka 24 Jam
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TENTANG KAMI -->
+
+<section class="section" id="tentang">
+  <div class="container about-grid">
+
+    <div>
+      <img
+        class="about-photo"
+        src="images/warmindo-dapur.jpg.jpeg"
+        alt="Dapur dan kegiatan memasak Warmindo Samiasih"
+      >
+    </div>
+
+    <div class="about-copy">
+
+      <span class="eyebrow">TENTANG KAMI</span>
+
+      <h2>Kenalan dengan Warmindo Samiasih</h2>
+
+      <p>
+        Warmindo Samiasih merupakan usaha kuliner yang berdiri sejak tahun 2018 dan dikelola oleh Andre selaku pemilik. Usaha ini menyediakan berbagai makanan dan minuman siap saji dengan harga yang relatif terjangkau.
+      </p>
+
+      <p>
+        Berlokasi di kawasan yang dekat dengan lingkungan kampus dan permukiman, Warmindo Samiasih menjadi pilihan bagi mahasiswa maupun masyarakat sekitar.
+      </p>
+
+      <p>
+        Dengan jam operasional 24 jam, Warmindo Samiasih berupaya melayani pelanggan pada berbagai waktu sesuai kebutuhan.
+      </p>
+
+      <div class="features">
+
+        <div class="feature">
+          <i class="fa-regular fa-calendar-check"></i>
+          Berdiri sejak 2018
+        </div>
+
+        <div class="feature">
+          <i class="fa-regular fa-clock"></i>
+          Operasional 24 Jam
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-wallet"></i>
+          Harga Terjangkau
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-utensils"></i>
+          Menu Beragam
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DAFTAR MENU -->
+
+<section class="section" id="menu">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">DAFTAR MENU</span>
+      <h2>Pilihan Menu Warmindo</h2>
+      <p>
+        Pilih menu favoritmu dan tambahkan ke keranjang untuk membuat pesanan.
+      </p>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+
+  </div>
+</section>
+
+<!-- PEMESANAN -->
+
+<section class="section" id="pemesanan">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">PEMESANAN</span>
+      <h2>Pesan Menu Favoritmu</h2>
+      <p>
+        Masukkan pilihan menu ke keranjang, lengkapi data pemesan, lalu kirim pesanan melalui WhatsApp.
+      </p>
+    </div>
+
+    <div class="order-grid">
+
+      <div class="order-panel">
+
+        <h3 class="panel-title">
+          <i class="fa-solid fa-basket-shopping"></i>
+          Keranjang Pesanan
+        </h3>
+
+        <div class="cart-list" id="cartList">
+
+          <div class="empty-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+            Keranjang masih kosong.
+            <br>
+            Silakan pilih menu terlebih dahulu.
+          </div>
+
+        </div>
+
+        <div class="cart-total">
+          <span>Total Pembayaran</span>
+          <span id="cartTotal">Rp0</span>
+        </div>
+
+      </div>
+
+      <div class="order-panel">
+
+        <h3 class="panel-title">
+          <i class="fa-brands fa-whatsapp" style="color:#16b96a"></i>
+          Data Pemesan
+        </h3>
+
+        <form id="orderForm">
+
+          <div class="form-group">
+            <label for="customerName">Nama Pemesan *</label>
+            <input
+              id="customerName"
+              type="text"
+              placeholder="Masukkan nama kamu"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="customerPhone">Nomor HP</label>
+            <input
+              id="customerPhone"
+              type="tel"
+              placeholder="Masukkan nomor HP"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="orderType">Jenis Pesanan *</label>
+            <select id="orderType" required>
+              <option value="">Pilih jenis pesanan</option>
+              <option>Makan di tempat</option>
+              <option>Ambil sendiri</option>
+              <option>Diantar</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="customerAddress">Alamat (jika diantar)</label>
+            <textarea
+              id="customerAddress"
+              placeholder="Masukkan alamat pengantaran jika diperlukan"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="orderNote">Catatan Pesanan</label>
+            <textarea
+              id="orderNote"
+              placeholder="Contoh: tidak pedas, sambal dipisah, dan sebagainya"
+            ></textarea>
+          </div>
+
+          <button class="btn send-btn" type="submit">
+            <i class="fa-brands fa-whatsapp"></i>
+            Kirim Pesanan ke WhatsApp
+          </button>
+
+          <p class="form-note">
+            Pesanan akan dikirim ke WhatsApp Warmindo Samiasih. Konfirmasi ketersediaan menu, biaya pengantaran, dan pembayaran dilakukan langsung dengan pihak Warmindo.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+
+<section class="section" id="galeri">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">GALERI</span>
+      <h2>Suasana Warmindo Samiasih</h2>
+      <p>
+        Kenali suasana tempat dan kegiatan operasional kami.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <img
+        src="images/warmindo-menu.jpg.jpeg"
+        alt="Etalase menu Warmindo Samiasih"
+      >
+
+      <img
+        src="images/warmindo-dapur.jpg.jpeg"
+        alt="Kegiatan memasak di dapur Warmindo Samiasih"
+      >
+
+      <img
+        src="images/warmindo-gorengan.jpg.jpeg"
+        alt="Aneka gorengan Warmindo Samiasih"
+      >
+
+    </div>
+  </div>
+</section>
+
+<!-- LOKASI -->
+
+<section class="section" id="lokasi">
+  <div class="container location-grid">
+
+    <div>
+      <iframe
+        class="map-frame"
+        title="Peta lokasi Warmindo Samiasih"
+        src="https://www.google.com/maps?q=Warmindo%20Samiasih%2C%20Jl.%20Jawa%20No.%209%2C%20Dabag%2C%20Condongcatur%2C%20Sleman&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="location-copy">
+
+      <span class="eyebrow">KUNJUNGI KAMI</span>
+
+      <h2>Temukan Warmindo Samiasih</h2>
+
+      <p>
+        Kami siap menyambut kamu untuk menikmati berbagai pilihan makanan dan minuman. Silakan kunjungi lokasi Warmindo Samiasih.
+      </p>
+
+      <div class="contact-line">
+        <i class="fa-regular fa-clock"></i>
+        <span>Jam operasional: 24 jam</span>
+      </div>
+
+      <div class="contact-line">
+        <i class="fa-solid fa-phone"></i>
+        <span>087843184575</span>
+      </div>
+
+      <div class="contact-line">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>
+          Jl. Jawa No. 9, Dabag, Condongcatur, Kecamatan Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+        </span>
+      </div>
+
+      <a
+        class="btn"
+        href="https://maps.app.goo.gl/NRApjs267F27Ebg68"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-solid fa-location-dot"></i>
+        Buka Lokasi di Google Maps
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>Warmindo Samiasih</h3>
+        <p>
+          Hangat, lezat, dan terjangkau. Menyediakan pilihan makanan dan minuman untuk menemani aktivitasmu setiap hari.
+        </p>
+      </div>
+
+      <div>
+        <h3>Navigasi</h3>
+
+        <div class="footer-links">
+          <a href="#beranda">Beranda</a>
+          <a href="#tentang">Tentang Kami</a>
+          <a href="#menu">Daftar Menu</a>
+          <a href="#pemesanan">Pemesanan</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#lokasi">Lokasi</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Hubungi Kami</h3>
+        <p>
+          <i class="fa-brands fa-whatsapp"></i>
+          087843184575
+        </p>
+        <p>
+          <i class="fa-regular fa-clock"></i>
+          Buka 24 Jam
+        </p>
+        <a
+          href="https://maps.app.goo.gl/NRApjs267F27Ebg68"
+          target="_blank"
+          rel="noopener"
+        >
+          Lihat lokasi di Google Maps
+        </a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Warmindo Samiasih. Seluruh hak cipta dilindungi.
+    </div>
+
+  </div>
+</footer>
+
+<!-- TOMBOL WHATSAPP -->
+
+<a
+  class="wa-float"
+  href="https://wa.me/6287843184575"
+  target="_blank"
+  rel="noopener"
+  aria-label="Hubungi Warmindo Samiasih melalui WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+
+// DATA MENU
+// Nama file gambar disesuaikan dengan folder images milik kamu.
+
+const menuItems = [
+
+  {
+    code: 'AG001',
+    name: 'Ayam Goreng',
+    price: 8000,
+    image: 'ayam-goreng.jpg.png',
+    desc: 'Ayam goreng dengan cita rasa gurih.'
+  },
+
+  {
+    code: 'AG002',
+    name: 'Ayam Balado',
+    price: 9000,
+    image: 'ayam-balado.jpg.png',
+    desc: 'Ayam dengan bumbu balado.'
+  },
+
+  {
+    code: 'AG003',
+    name: 'Ayam Kecap',
+    price: 8000,
+    image: 'ayam-kecap.jpg.png',
+    desc: 'Ayam dengan bumbu kecap.'
+  },
+
+  {
+    code: 'GR001',
+    name: 'Gorengan',
+    price: 1000,
+    image: 'warmindo-gorengan.jpg.jpeg',
+    desc: 'Aneka gorengan untuk teman makan.'
+  },
+
+  {
+    code: 'IK001',
+    name: 'Ikan Sarden',
+    price: 5000,
+    image: 'ikan-sarden.jpg.png',
+    desc: 'Ikan sarden dengan bumbu.'
+  },
+
+  {
+    code: 'IK002',
+    name: 'Ikan Lele',
+    price: 5000,
+    image: 'ikan-lele.jpg.png',
+    desc: 'Olahan ikan lele.'
+  },
+
+  {
+    code: 'SM001',
+    name: 'Semur Jengkol',
+    price: 3000,
+    image: 'semur-jengkol.jpg.png',
+    desc: 'Jengkol dengan bumbu semur.'
+  },
+
+  {
+    code: 'MI001',
+    name: 'Indomie',
+    price: 7000,
+    image: 'indomie.jpg.png',
+    desc: 'Mi instan untuk pilihan makan praktis.'
+  },
+
+  {
+    code: 'NS001',
+    name: 'Nasi',
+    price: 5000,
+    image: 'nasi.jpg.png',
+    desc: 'Nasi putih sebagai pelengkap menu.'
+  },
+
+  {
+    code: 'SY001',
+    name: 'Sayur',
+    price: 1000,
+    image: 'sayur.jpg.png',
+    desc: 'Pilihan sayur sebagai pelengkap.'
+  },
+
+  {
+    code: 'TH001',
+    name: 'Tahu Balado',
+    price: 2000,
+    image: 'tahu-balado.jpg.png',
+    desc: 'Tahu dengan bumbu balado.'
+  },
+
+  {
+    code: 'TG001',
+    name: 'Terong Balado',
+    price: 2000,
+    image: 'terong-balado.jpg.png',
+    desc: 'Terong dengan bumbu balado.'
+  },
+
+  {
+    code: 'TL001',
+    name: 'Telur Dadar',
+    price: 5000,
+    image: 'telur-dadar.jpg.png',
+    desc: 'Telur dadar untuk pelengkap makan.'
+  },
+
+  {
+    code: 'TL002',
+    name: 'Telur Balado',
+    price: 5000,
+    image: 'telur-balado.jpg.png',
+    desc: 'Telur dengan bumbu balado.'
+  },
+
+  {
+    code: 'OM001',
+    name: 'Omelet',
+    price: 6000,
+    image: 'omelet.jpg.png',
+    desc: 'Omelet telur.'
+  },
+
+  {
+    code: 'TP001',
+    name: 'Tempe',
+    price: 1000,
+    image: 'tempe.jpg.png',
+    desc: 'Tempe sebagai lauk pelengkap.'
+  }
+
+];
+
+const cart = {};
+
+const rupiah = value =>
+  'Rp' + value.toLocaleString('id-ID');
+
+
+// MENAMPILKAN MENU
+
+function renderMenu() {
+
+  const grid = document.getElementById('menuGrid');
+
+  grid.innerHTML = menuItems.map((item, index) => `
+
+    <article class="menu-card">
+
+      <img
+        src="images/${item.image}"
+        alt="${item.name}"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='images/warmindo-menu.jpg.jpeg';"
+      >
+
+      <div class="menu-info">
+
+        <span class="menu-code">
+          ${item.code}
+        </span>
+
+        <h3>${item.name}</h3>
+
+        <p>${item.desc}</p>
+
+        <div class="menu-bottom">
+
+          <span class="price">
+            ${rupiah(item.price)}
+          </span>
+
+          <button
+            class="add-btn"
+            type="button"
+            aria-label="Tambah ${item.name}"
+            onclick="addToCart(${index})"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  `).join('');
+
+}
+
+
+// MENAMBAHKAN MENU KE KERANJANG
+
+function addToCart(index) {
+
+  const item = menuItems[index];
+
+  cart[index] = (cart[index] || 0) + 1;
+
+  renderCart();
+
+}
+
+
+// MENGUBAH JUMLAH MENU
+
+function changeQty(index, delta) {
+
+  cart[index] = (cart[index] || 0) + delta;
+
+  if (cart[index] <= 0) {
+    delete cart[index];
+  }
+
+  renderCart();
+
+}
+
+
+// MENAMPILKAN KERANJANG
+
+function renderCart() {
+
+  const list = document.getElementById('cartList');
+
+  const entries = Object.entries(cart);
+
+  if (!entries.length) {
+
+    list.innerHTML = `
+      <div class="empty-cart">
+        <i class="fa-solid fa-basket-shopping"></i>
+        Keranjang masih kosong.
+        <br>
+        Silakan pilih menu terlebih dahulu.
+      </div>
+    `;
+
+    document.getElementById('cartTotal').textContent = 'Rp0';
+
+    return;
+  }
+
+  let total = 0;
+
+  list.innerHTML = entries.map(([key, qty]) => {
+
+    const item = menuItems[Number(key)];
+
+    const subtotal = item.price * qty;
+
+    total += subtotal;
+
+    return `
+
+      <div class="cart-row">
+
+        <div>
+          <strong>${item.name}</strong>
+          <small>${rupiah(item.price)} / item</small>
+        </div>
+
+        <div class="qty-controls">
+
+          <button
+            type="button"
+            onclick="changeQty(${key}, -1)"
+          >−</button>
+
+          <strong>${qty}</strong>
+
+          <button
+            type="button"
+            onclick="changeQty(${key}, 1)"
+          >+</button>
+
+        </div>
+
+        <strong>${rupiah(subtotal)}</strong>
+
+      </div>
+
+    `;
+
+  }).join('');
+
+  document.getElementById('cartTotal').textContent =
+    rupiah(total);
+
+}
+
+
+// MENGIRIM PESANAN KE WHATSAPP
+
+document.getElementById('orderForm').addEventListener(
+  'submit',
+  function(event) {
+
+    event.preventDefault();
+
+    const entries = Object.entries(cart);
+
+    if (!entries.length) {
+
+      alert('Keranjang masih kosong. Silakan pilih menu terlebih dahulu.');
+
+      return;
+    }
+
+    const name =
+      document.getElementById('customerName').value.trim();
+
+    const phone =
+      document.getElementById('customerPhone').value.trim();
+
+    const type =
+      document.getElementById('orderType').value;
+
+    const address =
+      document.getElementById('customerAddress').value.trim();
+
+    const note =
+      document.getElementById('orderNote').value.trim();
+
+    if (!name || !type) {
+
+      alert('Mohon lengkapi nama dan jenis pesanan.');
+
+      return;
+    }
+
+    let total = 0;
+
+    const details = entries.map(([key, qty]) => {
+
+      const item = menuItems[Number(key)];
+
+      const subtotal = item.price * qty;
+
+      total += subtotal;
+
+      return `- ${item.name} x${qty} = ${rupiah(subtotal)}`;
+
+    }).join('\n');
+
+    const message = `
+Halo Warmindo Samiasih, saya ingin memesan:
+
+${details}
+
+Total: ${rupiah(total)}
+
+Nama: ${name}
+Nomor HP: ${phone || '-'}
+Jenis pesanan: ${type}
+Alamat: ${address || '-'}
+Catatan: ${note || '-'}
+
+Mohon konfirmasi pesanan saya. Terima kasih.
+`;
+
+    window.open(
+      'https://wa.me/6287843184575?text=' +
+      encodeURIComponent(message),
+      '_blank'
+    );
+
+  }
+);
+
+
+// NAVBAR MOBILE
+
+document.getElementById('menuToggle').addEventListener(
+  'click',
+  () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+);
+
+document.querySelectorAll('#navLinks a').forEach(link => {
+
+  link.addEventListener('click', () => {
+
+    document.getElementById('navLinks').classList.remove('open');
+
+  });
+
+});
+
+
+// MENJALANKAN MENU
+
+renderMenu();
+
+</script>
+
+</body>
+</html>
